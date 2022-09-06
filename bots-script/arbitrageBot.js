@@ -272,7 +272,7 @@ const arbTrade=async()=>{
 
                         // UpdateDb(difference,profitUsd,res.transactionHash)
                 }catch(e){
-                    console.log("Transaction Failed")
+                    console.log(e)
                     // UpdateDb(difference,profitUsd,"Transaction failed ")
                 }
                  
