@@ -35,7 +35,8 @@ const  swapUniToSushi=async()=>{
             console.log(res.transactionHash)
             return res.transactionHash
     }catch(e){
-        console.log(e)
+        console.log("Transaction failed")
+        
     }
    
         

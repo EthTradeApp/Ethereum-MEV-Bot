@@ -33,7 +33,7 @@ const validPeriod = 50
 
 // const wss="wss://ropsten.infura.io/ws/v3/85fc7c4c61664a96808975adbb581787"
 const wss="wss://mainnet.infura.io/ws/v3/85fc7c4c61664a96808975adbb581787"
-
+// const wss="wss://mainnet.infura.io/ws/v3/a5b2c7fb4bb14412832e0fad444661dd"
 
 
 const addrToken0 ="0x6B175474E89094C44Da98b954EedeAC495271d0F"
@@ -262,21 +262,10 @@ const arbTrade=async()=>{
                console.log(`profit:$ ${profitUsd} or  DAI`)
             //    UpdateDb(difference,profitUsd,"None")
                  if(profitUsd <1) return  console.log("profit is too low for trade")
-
-                  
-                try{
-                    const res=await arbContractTx.methods.UniswapToSushiwapTrade(addrToken0x,addrToken1x).send({
-                        from:publicAddress})
-                        console.log(res)
-                        console.log(res.transactionHash)
-
-                        // UpdateDb(difference,profitUsd,res.transactionHash)
-                }catch(e){
-                    console.log(e)
-                    // UpdateDb(difference,profitUsd,"Transaction failed ")
-                }
-                 
-                  
+                   
+                 swapUniToSushi()
+             
+             
                 
             }
 
