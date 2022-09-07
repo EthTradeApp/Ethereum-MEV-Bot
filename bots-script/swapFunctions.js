@@ -30,11 +30,14 @@ const arbContract=new web3.eth.Contract(
 const  swapUniToSushi=async()=>{
     try{
         const res=await arbContract.methods.UniswapToSushiwapTrade(addrToken0,addrToken1).send({
-            from:publicAddress})
+            from:publicAddress
+           
+           })
             console.log(res)
             console.log(res.transactionHash)
             return res.transactionHash
     }catch(e){
+        console.log(e)
         console.log("Transaction failed")
         
     }
