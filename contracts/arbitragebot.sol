@@ -143,7 +143,7 @@ contract ArbitrageBot {
         uint startBalance = IERC20Minimal(_token1).balanceOf(address(this));
         uint token2InitialBalance = IERC20Minimal(_token2).balanceOf(address(this));
         
-        SushiswapToken(Router2,_token1, _token2, startBalance);
+          swapToken(Router2,_token1, _token2, startBalance);
         uint token2Balance = IERC20Minimal(_token2).balanceOf(address(this));
         uint tradeableAmount = token2Balance - token2InitialBalance;
        swapExactInputSingle(swapRouter,_token2, _token1,tradeableAmount);
