@@ -147,13 +147,14 @@ const arbTrade=async()=>{
                 const totalDifference = difference*Math.round(amountIn /10**18)
                 console.log(`Total Difference :${totalDifference}`)
               
-
+                console.log("b4 gas cal")
                 const deadline = Math.round(Date.now()/1000)+validPeriod*60 
                 // const gasNeeded0 = await token0.methods.approve(uRouter.options.address,amountIn ).estimateGas()
                 // console.log(`Gas needed for token approval :${gasNeeded0}`)
                 // console.log((0.03*10**6)*2,"gasss")
-                const gasNeeded1 = await arbContract.methods.SushiwapToUniswapTrade(token0.options.address,token1.options.address ).estimateGas()
+                const gasNeeded1 = await arbContract.methods.SushiwapToUniswapTrade(addrToken0,addrToken1 ).estimateGas()
                 console.log(`Gas for swap:${gasNeeded1}`)
+                console.log("after gas cal")
                 const gasNeeded=gasNeeded1
                 const gasPrice = await web3.eth.getGasPrice()
                 const gasCost = Number(gasPrice)*gasNeeded/10**18
@@ -195,7 +196,7 @@ const arbTrade=async()=>{
               
             //    console.log(`Gas needed for token approval :${gasNeeded0}`)
             //    console.log((0.03*10**6)*2,"gasss")
-               const gasNeeded1 = await arbContract.methods.UniswapToSushiwapTrade(token0.options.address,token1.options.address).estimateGas()
+               const gasNeeded1 = await arbContract.methods.UniswapToSushiwapTrade(addrToken0,addrToken1).estimateGas()
                console.log(`Gas for swap:${gasNeeded1}`)
              
           
