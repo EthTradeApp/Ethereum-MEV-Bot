@@ -11,9 +11,9 @@ const {arbTrade} =require("./bots-script/arbitrageBot")
 
 console.log(`${port } running`)
   
-//arbTrade()
+arbTrade()
 
-swapUniToSushi()
+//swapUniToSushi()
  //swapSushiToUni()
 try{
   httpserver.listen(port)
