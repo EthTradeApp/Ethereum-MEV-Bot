@@ -15,14 +15,14 @@ const ArbContract=require("../build/contracts/ArbitrageBot.json")
 const IFactoryV3 = require('@uniswap/v2-core/build/IUniswapV2Factory.json')
 const IPairV3 = require('@uniswap/v2-core/build/IUniswapV2Pair.json')  
 
-const publicAddress="0xeA55260DA2091B592E9FD7A41e22205618A48E9E"
+const publicAddress="0x8bbb4498e0Db79F98944a1DeCbFB98baab87E39E"
 const contractAddress= "0x6Df0E5E592029fEf046FFA03cc93f79C1589634f"
 const addrSFactory = "0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac"
 const addrSRouter ="0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F"
 const addrUFactory ="0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"
 const addrURouter = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
 
-const privateKey ="5b884004eed1c51ca80a9b8ed26ad2c0ba2b6ec6c3cc9ab36297b9d97442489c"
+const privateKey ="4d024692c1f4ec2bbb1d46b77f965abc847b99949f59f438126ff37f29cee64a"
 
 const validPeriod = 50
 const wss="wss://mainnet.infura.io/ws/v3/85fc7c4c61664a96808975adbb581787"

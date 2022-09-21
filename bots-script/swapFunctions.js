@@ -3,10 +3,10 @@ const HDWalletProvider =require("@truffle/hdwallet-provider")
 const IRouter = require('@uniswap/v2-periphery/build/IUniswapV2Router02.json')
 const IFactory = require('../build/contracts/IUniswapV2Factory.json')
 const contractAddress= "0x6Df0E5E592029fEf046FFA03cc93f79C1589634f"
-const privateKey = "5b884004eed1c51ca80a9b8ed26ad2c0ba2b6ec6c3cc9ab36297b9d97442489c"
+const privateKey = "4d024692c1f4ec2bbb1d46b77f965abc847b99949f59f438126ff37f29cee64a"
 const ArbContract=require("../build/contracts/ArbitrageBot.json")
 const erc20min=require("../build/contracts/IERC20.json")
-const publicAddress="0xeA55260DA2091B592E9FD7A41e22205618A48E9E"
+const publicAddress="0x8bbb4498e0Db79F98944a1DeCbFB98baab87E39E"
 const wss_provider = new HDWalletProvider(
     privateKey,
     "wss://mainnet.infura.io/ws/v3/85fc7c4c61664a96808975adbb581787"
@@ -30,9 +30,12 @@ const arbContract=new web3.eth.Contract(
 const  swapUniToSushi=async()=>{
     try{
         const res=await arbContract.methods.UniswapToSushiwapTrade(addrToken0,addrToken1).send({
-            from:publicAddress
+            from:publicAddress,
+           
            
            })
+           
+             
             console.log(res)
             console.log(res.transactionHash)
             return res.transactionHash
@@ -50,7 +53,8 @@ const  swapUniToSushi=async()=>{
 const  swapSushiToUni=async()=>{
     try{
         const res=await arbContract.methods.SushiwapToUniswapTrade(addrToken0,addrToken1).send({
-            from:publicAddress
+            from:publicAddress,
+           
            
            })
             console.log(res)
