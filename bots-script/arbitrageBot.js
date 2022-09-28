@@ -83,7 +83,7 @@ const arbTrade=async()=>{
         token1Symbol = await token1.methods.symbol().call()
         console.log(`Token Assets: ${ token0Symbol}/${token1Symbol}`)
        
-        amountIn = await arbContractTx.methods.getBalance("0x6B175474E89094C44Da98b954EedeAC495271d0F").call()
+        amountIn = await arbContractTx.methods.getBalance("0xb10a27A50000fdf414A57bbFe36736B23ef9ac30").call()
         console.log(`Initial Balance of Contract:${web3.utils.fromWei(amountIn , "ether")} DAI`)
         
     }
