@@ -1,4 +1,4 @@
-# Ethereum_MEV_Bot
+# Ethereum-MEV-Bot
 
 A Maximal Extractable Value (MEV) bot that scans the Ethereum mempool for profitable transactions and executes them to capture arbitrage, frontrunning, and liquidation opportunities.
 
@@ -78,4 +78,4 @@ MIT License
 
 🚀 Ready to capture Ethereum MEV opportunities? Start your bot today and join the cutting edge of blockchain trading! 💰
 
-#MEV #Ethereum #Flashbots #Arbitrage
+#MEV #Ethereum #Flashbots #Arbitrage #Trading #CryptoTrading
