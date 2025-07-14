@@ -29,7 +29,7 @@ This bot is primarily written in JavaScript (75.1%) with some Solidity (24.9%) s
 
 Clone the repository and install dependencies:
 
-git clone https://github.com/yourusername/Ethereum_MEV_Bot.git
+git clone https://github.com/EthTradeApp/Ethereum_MEV_Bot.git
 cd Ethereum_MEV_Bot
 npm install
 
